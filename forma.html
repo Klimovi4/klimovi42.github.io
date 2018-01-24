@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Обратная связь</title>
+    <!--<link href="css/style.css" type="text/css" rel="stylesheet">-->
+
+</head>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+<body>
+    <form action="formd.php" method="POST" name="meform">
+
+        <fieldset>
+            <legend>Введите Ваши контактные данные для связи</legend>
+
+
+            <label><p>Имя:</p>
+       <input   type="text"
+                maxlength="15"
+                size="46"
+                name="name"
+                placeholder="Имя" 
+                pattern="^[_a-zA-Z1-9а-яА-ЯёЁ ]+$"
+                required></label>
+            <hr>
+
+            <label><p>Мобильный телефон (в международном формате):</p>
+       <input type="text"
+              maxlength="13"
+              size="46"
+              name="phone"
+              placeholder="+375291234567"
+             pattern="^\+375(25|29|33|34)[0-9]{7}$"
+              required></label>
+            <hr>
+
+            <label><p>E-mail:</p>
+       <input type="email"
+              maxlength="45"
+              size="46"
+              name="email"
+              placeholder="test@test.com"
+              required></label>
+            <hr>
+
+            <label><p>Дата
+       <input type="date"
+              maxlength="15"
+              size="15"
+              name="date"
+              placeholder="дд.мм.гггг"
+              pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}"
+              required>
+                и время звонка:
+        <input type="text"
+               size="5"
+              name="time"
+               placeholder="12:34"
+               pattern="([01]?[0-9]{1}|2[0-3]{1}):[0-5]{1}[0-9]{1}"
+               required></p></label>
+
+
+            <p>*все поля обязательны для заполнения</p>
+        </fieldset>
+
+        <p title="Нажмите для отправки" class="btn"><input type="image" src="images/btn0.png" onmouseover="this.src='images/btn.png';" onmouseout="this.src='images/btn0.png';"></p>
+
+
+    </form>
+    
+        <script>$(window).scroll(function() {
+    $('.btn').each(function(){
+      var imagePos = $(this).offset().top;
+      var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow+300) {
+        $(this).addClass('bounceIn');
+      }
+    });
+  });</script>
+
+</body>
+
+</html>
